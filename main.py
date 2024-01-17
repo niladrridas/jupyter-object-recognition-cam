@@ -7,7 +7,7 @@ from src.object_recognition import load_object_detection_model, perform_object_d
 # Load pre-trained object detection model (example: MobileNet SSD)
 prototxt_path = '/Users/niladridas/jupyter-object-recognition-cam/models/deploy.prototxt'
 model_path = '/Users/niladridas/jupyter-object-recognition-cam/models/yolov3.weights'
-net = load_object_detection_model(prototxt_path, model_path)              
+net = load_object_detection_model(prototxt_path, model_path)
 
 # Initialize webcam
 cap = cv2.VideoCapture(0)
@@ -15,10 +15,16 @@ cap = cv2.VideoCapture(0)
 # Adjustable confidence threshold
 confidence_threshold = 0.2
 
+# Set the expected input size of the model
+expected_input_size = (300, 300)
+
 # Loop to capture frames and perform object recognition
 while True:
     # Capture frame from webcam
     ret, frame = cap.read()
+
+    # Resize the frame to the expected input size
+    frame = cv2.resize(frame, expected_input_size)
 
     # Display frame resolution
     frame_resolution = f"Resolution: {frame.shape[1]} x {frame.shape[0]}"

@@ -5,8 +5,8 @@ import numpy as np
 from src.object_recognition import load_object_detection_model, perform_object_detection
 
 # Load pre-trained object detection model (example: MobileNet SSD)
-prototxt_path = 'path/to/deploy.prototxt'
-model_path = 'path/to/model.caffemodel'
+prototxt_path = '/Users/niladridas/jupyter-object-recognition-cam/models/deploy.prototxt'
+model_path = '/Users/niladridas/jupyter-object-recognition-cam/models/yolov3.weights'
 net = load_object_detection_model(prototxt_path, model_path)
 
 # Initialize webcam

@@ -7,7 +7,7 @@ from src.object_recognition import load_object_detection_model, perform_object_d
 # Load pre-trained object detection model (example: MobileNet SSD)
 prototxt_path = '/Users/niladridas/jupyter-object-recognition-cam/models/deploy.prototxt'
 model_path = '/Users/niladridas/jupyter-object-recognition-cam/models/yolov3.weights'
-net = load_object_detection_model(prototxt_path, model_path)
+net = load_object_detection_model(/Users/niladridas/jupyter-object-recognition-cam/models/deploy.prototxt, /Users/niladridas/jupyter-object-recognition-cam/models/yolov3.weights')
 
 # Initialize webcam
 cap = cv2.VideoCapture(0)
